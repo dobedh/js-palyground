@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <h1>JS-playground</h1>
-    <script>
-        console.log("hello world");
-    </script>
-</body>
+    <head>
+        <meta charsset="UTF-8">
+    </head>
 
+    <body>
+        <h2>test</h2>
+        <script>
+            /*
+            var a = prompt("input number");
+            var n = Number(a);
+            if(n%2 === 0){
+                console.log(n + "은(는) 짝수입니다.")
+            }else {
+                console.log(n + "은(는) 홀수입니다.")
+            }
+            */ 
+            
+            var a = prompt("input any words");
+            if(a === a.toUpperCase()){
+                console.log(a + "는(은) 대문자입니다.");
+            } else if (a === a.toLowerCase()){
+                console.log(a + "는(은) 소문자입니다.");
+            } else {
+                console.log(a + "는(은) 보통문자입니다.")
+            }
+        </script>
+
+    </body>
 
 </html>
