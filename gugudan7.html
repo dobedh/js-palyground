@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+        단수를 입력하세요 : <input type='text' id='number'> 
+        <button onclick='rung()'> 확인 </button>  
+        <br>
+        <br>
+        <div id="result"></div>
+        <script> 
+            function rung(){
+                var stringN = document.getElementById('number').value;
+                var n = Number(stringN);
+                var r = document.getElementById('result');
+                r.innerHTML = " ";
+                if(n>1 && n<10){
+                for(i=1; i<10; i++){
+                    var a = document.createElement('p');
+                    a.innerHTML = n + " * " + i +  " = " + n*i + "<br>"
+                    r.appendChild(a);
+                    };
+                } else {
+                        var a = document.createElement('p');
+                        a.innerHTML = "2와 9 사이의 숫자를 넣어주세요"
+                        r.appendChild(a);              
+                 }; 
+              }
+         </script>
+    
+</body>
+</html>
