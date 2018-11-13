@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html>
+<body>
+    <script>
+        //4. 시도(4)//
+        var numbers = {};
+        numbers.all = [];
+        numbers.prime = [];
+        numbers.addAll = function(number){
+            for(i=1; i<number+1; i++){
+                numbers.all.push(i)
+                };
+                return;
+            };  
+        numbers.primeIs = function() {
+            for(var i = 0; i<numbers.all.length; i++){
+                var r = 0;
+                for(var j = 0; j<numbers.all[i]; j++){
+                    if(numbers.all[i]%j === 0){
+                        r++
+                    }
+                };
+                if(r === 1){
+                    numbers.prime.push(i+1);
+                };
+            };     
+        };  
+
+        //1. 시도(1)// 
+        /*
+       for(i=2; i<10001; i++){
+            if(i === 2 || i ===3 || i ===5 || i ===7){
+                document.write(i + "<br>");
+            } else if(i%2 === 0 || i%3 === 0 || i%5 === 0 || i%7 === 0) {
+
+            } else{
+                document.write(i + "<br>");
+            };
+        };
+        */
+
+        //2. 시도 (2)//
+        /*
+        var prime = function(){
+            for(i=1; i<10001; i++){
+                var i = [];
+                for(j=1; j<i; j++){
+                    if(i%j === 0){
+                        i.push(j);
+                    };
+                };
+                if(i.length === 1){
+                    return console.log(i + "<br>")
+                }
+             };
+        };
+        */
+
+        //3. 시도 (3)//
+        /*
+        var natural = {};
+        var prime = {
+            "number" : [],
+            "putNumber" : function(){
+                for(var j = 1; j<10001; j++){
+                    this.number.push(j);
+                    };
+                 },
+            "divide" : function(){
+                for(i=0; i<this.number.length+1; i++){
+                    for(j=0; j<this.number[i]; j++){
+                        if(this.number[i]%j === 0){ 
+                        
+                        };
+                    };
+                };
+            }
+        };
+        */
+    </script>
+</body>
+</html>
