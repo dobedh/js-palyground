@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        //1. json을 활용하여 객체 생성하기 //
+        var p1 = {
+            "name" : "dobedh",
+            "vision" : "people ceo",
+            "ability" : 10,
+            "effort" : function(time){
+                console.log(this.name + "가 " + time + "시간의 공부를 했습니다. " + this.vision + "의 비전을 향해.")
+                this.ability += 1
+            }
+        }
+    </script>
+
+</body>
+</html>
