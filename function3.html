@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        //break는 return과 달리, 하나의 loop만을 끝냄//
+        for(var i = 0; i<10; i++){
+            for(var j = 0; j<10; j++){
+                console.log("i : " + i + " , " + "j : " + j);
+                if(i === 5 && j === 3){
+                    break;
+                };
+            };
+        };
+        //반면 return은 function 전체를 finish 시킴//
+        var finish = function(){
+            for(var i = 0; i<10; i++){
+                for(var j = 0; j<10; j++){
+                    console.log("i : " + i + " , " + "j : " + j);
+                    if(i === 5 && j === 3){
+                      return;
+                  };
+                };
+            };
+        };
+    </script>
+</body>
+</html>
