@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        var results = [];
+        function calculate() {
+            for (n = 2; n <= 9; n++) {
+                document.write("<h2>" + n + "단</h2>");
+                for (i = 1; i <= 9; i++) {
+                    results[i] = n * i;
+                    print();
+                }
+            }
+        }
+    
+        function print() {
+            var str = "";
+            str += n;
+            str += " x ";
+            str += i;
+            str += " = ";
+            str += results[i]
+            document.write(str + " <br> ");
+        };
+
+    </script>
+</body>
+</html>
