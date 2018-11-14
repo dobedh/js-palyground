@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구구단 출력하기</title>
+</head>
+<body>
+    <head>
+        <h1>구구단 출력하기</h1>
+    </head>
+    <script>
+        var results = []; 
+        for (var n = 2; n <= 9; n++){
+            document.write("<h2>" + n + "단</h2>");
+            for (var i = 1; i <= 9; i++) {
+                results[i] = n * i;
+                var str = "";
+                str += n;
+                str += " x ";
+                str += i;
+                str += " = ";
+                str += results[i]
+                document.write(str + " <br> ");
+            };
+
+        };
+    
+    
+    </script>
+</body>
+</html>
