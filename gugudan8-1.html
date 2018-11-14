@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>구구단 출력하기</h1>
+    <script>
+    // function 활용하여 구구단 구현해보기 - 혼자 시도한 버젼 // 
+    // 1. 구구단 계산 2. 계산하는 것을 function으로 간소화 (function은 return 값을 주는 것)
+    
+    /*
+    var results = [];
+    var calc = function(number) {
+        for (i = 1; i <= 9; i++) {
+            results[i] = number * i;
+        };
+        document.write(results);
+    };
+
+    var print = function() {
+        for (i = 2; i <= 9; i++) {
+            calc(i);
+        };
+
+    }
+    */
+
+    // 위 1차시도에서는 17째 줄부터 문제였음. 
+    // for만 쓴 2차시도에서는 성공했으나, 이 for를 function안에 넣었더니, loop가 작동하지 않음. 
+    //function이 호출한 한번만 작동하고, loop가 반복 되지 않는 문제 발생. 
+
+    // 2차 시도 // 
+    var results = [];
+    var calc = function(n){
+        for (var i = 1; i <= 9; i++) {
+            results[i] = n * i ;
+            var str = "";
+            str += n;
+            str += " x ";
+            str += i;
+            str += " = ";
+            str += results[i]
+            document.write(str + "<br>");
+        };
+    };
+
+    for (i = 2; i <= 9; i++) {
+        document.write("<h2>" + i + "단</h2>")
+        calc(i);
+    }
+
+    </script>
+</body>
+</html>
