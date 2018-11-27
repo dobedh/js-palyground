@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        gugudan = {};
+        gugudan.calculate = function(number){
+            document.write("<h1>" + number + "단</h1>");  
+            for(i = 1; i<10; i++){
+                var str = "";
+                str += number;
+                str += " * ";
+                str += i;
+                str += " = ";
+                str += number*i;
+                document.write(str + "<br>");
+            } 
+        };
+    </script>    
+</body>
+</html>
