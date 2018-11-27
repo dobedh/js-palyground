@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        /* 내가 한 연습과 강의에서의 코드가 다른점
+        1. 기능을 다 나눠서, 객체에 담는다. (1function = 1functioning) 
+        2. 배열을 형성해서, 배열안에 결과를 담고. -> 그 배열을 출력시킨다. 
+        */
+
+        //1. 객체 생성
+        gugudan = {};
+
+        //2.결과를 담을 배열 생성
+        gugudan.result = [];
+        gugudan.current = 1;
+        //3. 기능(1) : 1부터 9까지, 곱하는 계산 만들기
+        gugudan.calculate = function(n){
+            this.current = n;
+            for(var i = 0; i <9; i++){
+                this.result[i] = n*(i+1);      
+            };
+        };
+
+        //4. 기능(2) : 출력하기
+        gugudan.print = function(){
+            document.write("<h2>"+  this.current + "단</h2>")
+            for(var i = 0; i<9; i++){
+                var x = this.current;
+                var t = (i+1);
+                var y = this.result[i];
+                document.write(x + " * " + t + " = " + y + "<br>")
+            };
+        };
+
+        //5.기능(3) : 전체 기능 실행시키는 기능 생성
+        function main(){
+            for(var i = 2; i<=9; i++){
+                gugudan.calculate(i);
+                gugudan.print();
+            };
+        };
+        main();
+
+
+    </script>
+</body>
+</html>
